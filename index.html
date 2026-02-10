@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 
 <body>
@@ -302,13 +302,73 @@
                 <p class="signature">Forever yours,<br>Mischa</p>
             </div>
         </section>
+
+        <!-- Present Game Section -->
+        <section class="present-section scroll-reveal">
+            <h2>One Last Surprise... 🎁</h2>
+            <p class="game-instruction">What do you need for your next adventure?</p>
+
+            <div class="game-container">
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">📚</span>
+                        <h3>Textbooks</h3>
+                    </div>
+                </div>
+
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">🧥</span>
+                        <h3>Winter Coat</h3>
+                    </div>
+                </div>
+
+                <div class="card" data-type="correct" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">👨‍👩‍👧‍👦</span>
+                        <h3>Family</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ticket-reveal" class="ticket hidden">
+                <div class="ticket-header">
+                    <span>BOARDING PASS</span>
+                    <span class="airline">LoveAir ❤️</span>
+                </div>
+                <div class="ticket-body">
+                    <div class="ticket-info">
+                        <div class="passenger">
+                            <span class="label">PASSENGER</span>
+                            <span class="value">Angie</span>
+                        </div>
+                        <div class="flight-route">
+                            <span class="code">FRA</span>
+                            <span class="plane">✈️</span>
+                            <span class="code">BOG</span>
+                        </div>
+                        <div class="destination">
+                            <span class="label">DESTINATION</span>
+                            <span class="value">COLOMBIA 🇨🇴</span>
+                        </div>
+                        <div class="date-info">
+                            <span class="label">DATE</span>
+                            <span class="value">2026</span>
+                        </div>
+                    </div>
+                    <div class="ticket-barcode">
+                        |||||| ||||| ||||
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>Made with ❤️ for Angie</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

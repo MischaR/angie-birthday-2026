@@ -102,12 +102,12 @@ p {
 }
 
 #fireworksCanvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 9999;
     pointer-events: none;
 }
 
@@ -498,4 +498,217 @@ footer {
     font-size: 1.8rem;
     color: var(--text-secondary);
     margin-top: 40px;
+}
+
+/* Present Game Section */
+.present-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #fff, #f0f0f5);
+    text-align: center;
+}
+
+.game-instruction {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+}
+
+.game-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.card .emoji {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Animations */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.card.shake {
+    animation: shake 0.4s ease-in-out;
+    background: #ffe6e6;
+    /* Slight red tint */
+}
+
+.card.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+/* Ticket Styles */
+.ticket {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
+    display: none;
+    /* Hidden initially */
+    border: 2px solid var(--accent-gold);
+}
+
+.ticket.visible {
+    display: block;
+    transform: scale(1) rotateX(0);
+    opacity: 1;
+    animation: magicReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes magicReveal {
+    0% {
+        transform: scale(0.1) rotateX(90deg) translateY(100px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+
+    60% {
+        transform: scale(1.1) rotateX(-10deg) translateY(-20px);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: scale(1) rotateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.ticket-header {
+    background: var(--accent-blue);
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.ticket-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ticket .label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.ticket .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.ticket-barcode {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0.3;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ticket .value {
+        font-size: 1.2rem;
+    }
+
+    .flight-route {
+        font-size: 1.5rem;
+    }
 }
