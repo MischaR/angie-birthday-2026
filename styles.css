@@ -408,12 +408,15 @@ footer {
         padding: 60px 20px;
     }
 }
+
 /* Floating Emojis */
 .floating-emoji {
     position: fixed;
     pointer-events: none;
-    z-index: 0; /* Behind text but visible */
-    animation: floatUp 15s linear infinite; /* Slower, smoother */
+    z-index: 0;
+    /* Behind text but visible */
+    animation: floatUp 15s linear infinite;
+    /* Slower, smoother */
     will-change: transform, opacity;
     top: 100%;
 }
@@ -423,14 +426,76 @@ footer {
         transform: translateY(0) scale(0.5) rotate(0deg);
         opacity: 0;
     }
+
     10% {
         opacity: 0.6;
     }
+
     90% {
         opacity: 0.6;
     }
+
     100% {
         transform: translateY(-120vh) scale(1.2) rotate(360deg);
         opacity: 0;
     }
+}
+
+/* Love Note Section */
+.love-note-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 500px;
+    /* Reduced from 800px */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.love-message {
+    max-width: 600px;
+}
+
+.love-message h2 {
+    font-family: var(--font-main);
+    font-size: 3rem;
+    background: linear-gradient(135deg, #d9263e, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    background-clip: text;
+    display: inline-block;
+}
+
+.love-message p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.love-message .signature {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    margin-top: 40px;
 }
