@@ -128,5 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
+    // Floating Emojis
+    const emojis = ['❤️', '✨', '💙', '💛', '🇨🇴', '🇩🇪', '🥂', '🌸'];
+    const container = document.body;
+
+    function createFloatingEmoji() {
+        const el = document.createElement('div');
+        el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        el.className = 'floating-emoji';
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.fontSize = Math.random() * 20 + 20 + 'px'; // 20px - 40px
+        el.style.animationDuration = Math.random() * 10 + 10 + 's'; // 10s - 20s
+        el.style.animationDelay = Math.random() * 5 + 's';
+
+        container.appendChild(el);
+
+        // Remove after animation
+        setTimeout(() => {
+            el.remove();
+        }, 20000); // Max duration
+    }
+
+    // Create initial batch
+    for (let i = 0; i < 15; i++) {
+        setTimeout(createFloatingEmoji, i * 500);
+    }
+
+    // Continuous creation
+    setInterval(createFloatingEmoji, 1500);
+
     animate();
 });

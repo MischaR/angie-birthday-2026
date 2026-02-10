@@ -34,6 +34,30 @@ h1 {
     letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 20px;
+
+    /* Apple-style Blue Metallic Shimmer */
+    background: linear-gradient(110deg,
+            #001f3f 30%,
+            #0074e4 40%,
+            #ffffff 50%,
+            #0074e4 60%,
+            #001f3f 70%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: textShimmer 4s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
 }
 
 h2 {
@@ -382,5 +406,31 @@ footer {
     .video-section,
     .timeline-section {
         padding: 60px 20px;
+    }
+}
+/* Floating Emojis */
+.floating-emoji {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0; /* Behind text but visible */
+    animation: floatUp 15s linear infinite; /* Slower, smoother */
+    will-change: transform, opacity;
+    top: 100%;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-120vh) scale(1.2) rotate(360deg);
+        opacity: 0;
     }
 }
