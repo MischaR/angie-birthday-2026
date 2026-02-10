@@ -219,7 +219,7 @@ function triggerSuccess(card) {
     const ticket = document.getElementById('ticket-reveal');
 
     // 1. Update text
-    instruction.innerText = "YOU GUESSED IT! 🇨🇴✈️";
+    instruction.innerText = "You guessed it. Enjoy, te amo! 🇨🇴✈️";
     instruction.style.color = "var(--accent-red)";
     instruction.style.fontWeight = "bold";
 
@@ -240,6 +240,12 @@ function triggerSuccess(card) {
         card.style.opacity = '0';
         card.style.display = 'none';
 
+        // Hide container to remove extra margin/gap
+        document.querySelector('.game-container').style.display = 'none';
+
+        // Reduce instruction margin
+        document.querySelector('.game-instruction').style.marginBottom = '20px';
+
         // Show Ticket
         ticket.classList.remove('hidden');
         ticket.classList.add('visible');
@@ -247,10 +253,13 @@ function triggerSuccess(card) {
         // Scroll to ticket smoothly
         ticket.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
+        // Enable Fireworks for Finale (Fix to viewport)
+        const canvas = document.getElementById('fireworksCanvas');
+        canvas.classList.add('fireworks-fixed');
+
         // Celebration!
         if (window.celebrate) window.celebrate();
-        // launchConfetti function is not defined in this file separately but we can add it or just rely on fireworks
-        launchConfetti();
+        if (typeof launchConfetti === 'function') launchConfetti();
 
     }, 600);
 }
