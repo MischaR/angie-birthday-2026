@@ -219,7 +219,7 @@ function triggerSuccess(card) {
     const ticket = document.getElementById('ticket-reveal');
 
     // 1. Update text
-    instruction.innerText = "You guessed it. Enjoy, te amo! 🇨🇴✈️";
+    instruction.innerText = "You guessed it. Enjoy some lovely time with your family in Colombia, mi cosita linda. Te amo mucho! 🇨🇴✈️";
     instruction.style.color = "var(--accent-red)";
     instruction.style.fontWeight = "bold";
 
