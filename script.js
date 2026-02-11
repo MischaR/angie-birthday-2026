@@ -76,23 +76,46 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => hideLoading(youtubeLoading), 5000);
     }
 
-    // Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // Scroll Reveal Animation - progressive reveal with intersection ratio
+    const revealThresholds = [0, 0.1, 0.2, 0.3, 0.5, 0.7, 1];
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: revealThresholds });
 
     document.querySelectorAll('.scroll-reveal').forEach(el => {
-        observer.observe(el);
+        revealObserver.observe(el);
     });
+
+    // Scroll blend effect - sections fade/scale based on distance from center (only when revealed)
+    const blendSections = document.querySelectorAll('.hero, .video-section, .timeline-item, .love-note-section, .present-section');
+    let blendRaf = null;
+
+    function updateScrollBlend() {
+        const vh = window.innerHeight;
+        const center = vh / 2;
+        blendSections.forEach(section => {
+            const isRevealed = section.classList.contains('visible') || section.classList.contains('hero');
+            if (!isRevealed) return;
+            const rect = section.getBoundingClientRect();
+            const sectionCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(sectionCenter - center);
+            const maxDistance = vh * 0.9;
+            const blend = Math.max(0.75, 1 - (distance / maxDistance) * 0.25);
+            const scale = 0.98 + blend * 0.02;
+            section.style.setProperty('--scroll-blend', blend);
+            section.style.setProperty('--scroll-scale', scale);
+        });
+        blendRaf = null;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!blendRaf) blendRaf = requestAnimationFrame(updateScrollBlend);
+    }, { passive: true });
+    updateScrollBlend();
 
     // Fireworks Animation
     const canvas = document.getElementById('fireworksCanvas');
