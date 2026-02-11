@@ -191,6 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(createFloatingEmoji, 1500);
 
     animate();
+
+    // Parse all emoji on the page with Twemoji (fixes flag emojis on Windows)
+    if (typeof twemoji !== 'undefined') {
+        twemoji.parse(document.body, {
+            folder: 'svg',
+            ext: '.svg'
+        });
+    }
 });
 
 // Present Game Logic (Global Scope)
@@ -257,6 +265,11 @@ function triggerSuccess(card) {
     instruction.innerText = "You guessed it. Enjoy some lovely time with your family in Colombia, mi cosita linda. Te amo mucho! 🇨🇴✈️";
     instruction.style.color = "var(--accent-red)";
     instruction.style.fontWeight = "bold";
+
+    // Re-parse emojis for dynamic content
+    if (typeof twemoji !== 'undefined') {
+        twemoji.parse(instruction, { folder: 'svg', ext: '.svg' });
+    }
 
     // 2. Hide wrong cards
     cards.forEach(c => {
