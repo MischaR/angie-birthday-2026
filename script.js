@@ -1,4 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Scroll snap: only on scroll end, past midpoint (50%) - avoids "pushed back" feeling
+    const SNAP_THRESHOLD = 0.5; // 50% - must scroll past midpoint to commit
+    const sections = document.querySelectorAll('.hero, .video-section, .timeline-item, .love-note-section, .present-section');
+    let isSnapping = false;
+    let snapTimeout;
+    let lastScrollY = window.scrollY || 0;
+
+    function snapToSection(index) {
+        if (index < 0 || index >= sections.length) return;
+        isSnapping = true;
+        sections[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        clearTimeout(snapTimeout);
+        snapTimeout = setTimeout(() => { isSnapping = false; }, 900);
+    }
+
+    function trySnap() {
+        if (isSnapping) return;
+        const vh = window.innerHeight;
+        const midPx = vh * SNAP_THRESHOLD;
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        const scrollingDown = scrollY > lastScrollY;
+        lastScrollY = scrollY;
+
+        if (scrollingDown) {
+            let snapTo = -1;
+            for (let i = 0; i < sections.length; i++) {
+                const rect = sections[i].getBoundingClientRect();
+                if (rect.top < midPx) snapTo = i;
+            }
+            if (snapTo >= 0) {
+                const rect = sections[snapTo].getBoundingClientRect();
+                const elCenter = rect.top + rect.height / 2;
+                if (Math.abs(elCenter - vh / 2) > vh * 0.08) snapToSection(snapTo);
+            }
+        } else {
+            let snapTo = -1;
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const rect = sections[i].getBoundingClientRect();
+                if (rect.bottom > vh - midPx) snapTo = i;
+            }
+            if (snapTo >= 0) {
+                const rect = sections[snapTo].getBoundingClientRect();
+                const elCenter = rect.top + rect.height / 2;
+                if (Math.abs(elCenter - vh / 2) > vh * 0.08) snapToSection(snapTo);
+            }
+        }
+    }
+
+    let scrollEndTimer;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = setTimeout(trySnap, 200);
+    }, { passive: true });
+
     // Video loading states
     const youtubeLoading = document.getElementById('youtube-loading');
     const loveVideoLoading = document.getElementById('love-video-loading');

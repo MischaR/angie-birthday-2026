@@ -133,28 +133,30 @@ p {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     color: var(--text-secondary);
-    animation: bounce 2s infinite;
+    opacity: 0.8;
 }
 
-@keyframes bounce {
+.scroll-indicator svg {
+    width: 24px;
+    height: 24px;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
 
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
+.scroll-indicator span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
 
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
 }
 
 /* Video Section */
@@ -519,27 +521,59 @@ footer {
     }
 }
 
-/* Love Note Section */
+/* Love Note Section - fits in viewport */
 .love-note-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
+    padding: 20px 16px;
     background: #fff;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .love-note-section {
+        flex-direction: row;
+        gap: 48px;
+        padding: 32px 40px;
+        text-align: left;
+    }
+}
+
+.love-note-section .video-container {
+    flex-shrink: 0;
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    /* Reduced from 800px */
-    border-radius: 20px;
+    max-width: 280px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 480px) {
+    .video-container {
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 768px) {
+    .love-note-section .video-container {
+        margin-bottom: 0;
+        width: 480px;
+        height: min(640px, calc(100vh - 80px));
+    }
+
+    .love-note-section .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .video-container .video-loading {
@@ -557,31 +591,63 @@ footer {
     max-width: 600px;
 }
 
+@media (min-width: 768px) {
+    .love-message {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .love-message h2 {
     font-family: var(--font-main);
-    font-size: 3rem;
+    font-size: 1.85rem;
     background: linear-gradient(135deg, #d9263e, #ff6b6b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     background-clip: text;
     display: inline-block;
 }
 
+@media (min-width: 768px) {
+    .love-message h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+}
+
 .love-message p {
-    font-size: 1.5rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.55;
     color: var(--text-primary);
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    .love-message p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
 }
 
 .love-message .signature {
     font-family: 'Times New Roman', serif;
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--text-secondary);
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .love-message .signature {
+        font-size: 1.6rem;
+        margin-top: 24px;
+    }
 }
 
 /* Present Game Section */
@@ -812,5 +878,162 @@ footer {
 
     .flight-route {
         font-size: 1.5rem;
+    }
+}
+
+/* Smartphone optimizations - fit content in viewport, prevent cutoffs */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-content {
+        padding: 16px;
+    }
+
+    .scroll-indicator {
+        bottom: max(24px, env(safe-area-inset-bottom, 24px));
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .video-section {
+        padding: 40px 16px;
+    }
+
+    .video-section h2 {
+        margin-bottom: 24px;
+    }
+
+    .timeline-section {
+        padding: 40px 16px;
+    }
+
+    .timeline-heading {
+        padding-bottom: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .timeline-image {
+        height: 38vh;
+        min-height: 38vh;
+        max-height: 280px;
+        overflow: hidden;
+    }
+
+    .timeline-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .timeline-text {
+        padding: 2rem 1.25rem;
+    }
+
+    .timeline-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-text p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .date {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline {
+        gap: 48px;
+    }
+
+    .love-note-section {
+        padding: 24px 16px;
+    }
+
+    .love-note-section .video-container {
+        max-width: 240px;
+        margin-bottom: 16px;
+    }
+
+    .love-message h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .love-message p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .love-message .signature {
+        font-size: 1.25rem;
+        margin-top: 16px;
+    }
+
+    .present-section {
+        min-height: auto;
+        padding: 40px 16px;
+    }
+
+    .present-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .game-instruction {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    .game-container {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .card {
+        min-width: 100px;
+        min-height: 140px;
+        width: 100px;
+        height: 140px;
+    }
+
+    .card .emoji {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+    }
+
+    .ticket-header,
+    .ticket-body {
+        padding: 16px 20px;
+    }
+
+    .ticket .value {
+        font-size: 1rem;
+    }
+
+    .flight-route {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        padding: 40px 16px;
+        margin-top: 40px;
     }
 }
