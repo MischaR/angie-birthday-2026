@@ -30,7 +30,7 @@
 
 - **Date:** The Beginning
 - **Title:** From the colorful Colombia 🇨🇴
-- **Image:** `assets/colombia.png`
+- **Image:** `assets/Angie_Colombia.JPG`
 - **Image alt:** Colombian Landscape
 - **Description:** Born in the vibrant heart of the Coffee Region, your journey began surrounded by the warmth of family and the beauty of Colombia. This is where your strength, passion, and radiant spirit were forged.
 
@@ -40,7 +40,7 @@
 
 - **Date:** 2021
 - **Title:** New Beginnings in Germany 🇩🇪
-- **Image:** `assets/germany.png`
+- **Image:** `assets/Germany.jpg`
 - **Image alt:** Arriving in Germany
 - **Description:** Leaving everything behind to chase your dreams. You arrived in Germany with courage, diving into social work and braving the cold winters. A bold new chapter that proved just how resilient you are.
 
@@ -50,7 +50,7 @@
 
 - **Date:** January 2022
 - **Title:** Where It All Started ❤️
-- **Image:** `assets/castle.png`
+- **Image:** `assets/FirstMeetings.jpg`
 - **Image alt:** Castle Frankenstein
 - **Description:** First time we met, we planned to have dinner at **Burg Frankenstein**, but it was closed, dark, and scary. So we warmed up at an all-you-can-eat Asian restaurant, where I was completely enticed by your smile. After that, we had a few dates that made me completely fall for you. ❤️
 
@@ -80,7 +80,7 @@
 
 - **Date:** 2023
 - **Title:** Ambitious & Driven 🎓
-- **Image:** `assets/work.png`
+- **Image:** `assets/StartWork.jpg`
 - **Image alt:** Working Student
 - **Description:** Balancing a demanding MBA and work at **Xcelera** wasn't easy, but you made it look distinctive. Watching you grow professionally and academically has been nothing short of inspiring.
 
@@ -110,7 +110,7 @@
 
 - **Date:** March 2024
 - **Title:** Colombia Together 🇨🇴
-- **Image:** `assets/colombia_detail.png`
+- **Image:** `assets/Colombia_Trip.JPG`
 - **Image alt:** Trip to Colombia: San Andres & Yopal
 - **Description:** A journey to your roots. From the bustling streets of Bogota to the paradise beaches of San Andres & Providencia with your parents. Visiting El Yopal gave me a glimpse into the place that made you, you.
 
@@ -120,7 +120,7 @@
 
 - **Date:** September 2024
 - **Title:** Dubai Adventures 🇦🇪
-- **Image:** `assets/dubai.png`
+- **Image:** `assets/Dubai_Trip.JPG`
 - **Image alt:** Dubai Trip
 - **Description:** A study trip like no other. Exploring the futuristic skyline of Dubai, standing atop the Burj Khalifa, and soaking in the desert sun. A perfect blend of learning and unforgettable experiences.
 
@@ -130,7 +130,7 @@
 
 - **Date:** March 2025
 - **Title:** Viva México 🇲🇽
-- **Image:** `assets/mexico.png`
+- **Image:** `assets/Mexico.jpg`
 - **Image alt:** Mexico Trip
 - **Description:** Celebrating love at a joyful wedding. Feasting on authentic tacos, dancing to Shakira, and floating over pyramids in hot air balloons. Vibrant, colorful, and full of life—just like you.
 
@@ -140,7 +140,7 @@
 
 - **Date:** September 2025
 - **Title:** Roadtrip to St. Maxime 🇫🇷
-- **Image:** `assets/france.png`
+- **Image:** `assets/France.jpg`
 - **Image alt:** France Roadtrip
 - **Description:** Driving down to the Côte d'Azur for the sweet life. Baguettes, beaches, and sunsets in St. Maxime. A relaxing escape to enjoy the finer things in life together.
 
@@ -150,7 +150,7 @@
 
 - **Date:** November 2025
 - **Title:** Mastering the Future 🎓
-- **Image:** `assets/mba.png`
+- **Image:** `assets/MBA.jpg`
 - **Image alt:** MBA Graduation
 - **Description:** **Congratulations!** You did it! Successfully graduating with your MBA in General Management from IMC College. A huge milestone that reflects your dedication and intelligence.
 
@@ -160,7 +160,7 @@
 
 - **Date:** 2026
 - **Title:** Marketing Specialist 💼
-- **Image:** `assets/marketing.png`
+- **Image:** `assets/StartWorkFullTime.jpg`
 - **Image alt:** New Job
 - **Description:** Stepping into your new role as an IT Marketing Specialist. Ready to conquer the professional world with your creativity and expertise. The future is bright!
 
@@ -170,7 +170,7 @@
 
 - **Date:** The Future
 - **Title:** To What Comes Next 🚀
-- **Image:** `assets/future.png`
+- **Image:** `assets/future.jpg`
 - **Image alt:** Future Together
 - **Description:** 33 is just the beginning. I can't wait to see what the future holds for us—more travels, more laughs, and building our life, brick by brick, together. Happy Birthday, mi amor!
 
