@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Video loading states
+    const youtubeLoading = document.getElementById('youtube-loading');
+    const loveVideoLoading = document.getElementById('love-video-loading');
+    const loveVideo = document.querySelector('.love-note-section video');
+    const youtubeIframe = document.querySelector('.video-wrapper iframe');
+
+    function hideLoading(el) {
+        if (el) {
+            el.classList.add('loaded');
+            el.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    if (loveVideo) {
+        loveVideo.addEventListener('canplay', () => hideLoading(loveVideoLoading), { once: true });
+        loveVideo.addEventListener('loadeddata', () => hideLoading(loveVideoLoading), { once: true });
+    }
+
+    if (youtubeIframe) {
+        youtubeIframe.addEventListener('load', () => hideLoading(youtubeLoading), { once: true });
+        setTimeout(() => hideLoading(youtubeLoading), 5000);
+    }
+
     // Scroll Reveal Animation
     const observerOptions = {
         threshold: 0.15,
@@ -138,16 +161,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Floating Emojis
-    const emojis = ['❤️', '✨', '💙', '💛', '🇨🇴', '🇩🇪', '🥂', '🌸'];
+    // Floating Emojis (use simple emojis - flag emojis render as "CO"/"DE" on some systems)
+    const emojis = ['❤️', '✨', '💙', '💛', '🥂', '🌸', '✈️', '🌴'];
     const container = document.body;
 
     function createFloatingEmoji() {
         const el = document.createElement('div');
-        el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        const size = Math.random() * 20 + 20;
+        el.textContent = emoji;
         el.className = 'floating-emoji';
         el.style.left = Math.random() * 100 + 'vw';
-        el.style.fontSize = Math.random() * 20 + 20 + 'px';
+        el.style.fontSize = size + 'px';
+        el.style.lineHeight = '1';
         el.style.animationDuration = Math.random() * 10 + 10 + 's';
         el.style.animationDelay = Math.random() * 5 + 's';
 
@@ -183,13 +209,22 @@ function handleCardClick(element) {
         element.style.background = '#ffe6e6';
         wrongAttempts++;
 
-        // Feedback
+        // Brief "try again" feedback, then specific message
         const heading = element.querySelector('h3').innerText;
-        if (heading === 'Textbooks') {
-            instruction.innerText = "No way! MBA is finished! 🎉";
-        } else if (heading === 'Winter Coat') {
-            instruction.innerText = "Nope! It's going to be way warmer! ☀️";
-        }
+        instruction.innerText = "Try again! 💭";
+        instruction.style.color = "";
+
+        const messages = {
+            'Textbooks': "No way! MBA is finished! 🎉",
+            'Winter Coat': "Nope! It's going to be way warmer! ☀️",
+            'Suitcase': "You've got that packed already! Think bigger... 🧳",
+            'Camera': "You'll need more than memories to capture! 📸"
+        };
+        const specificMessage = messages[heading] || "Not quite! Try another one.";
+
+        setTimeout(() => {
+            instruction.innerText = specificMessage;
+        }, 400);
 
         // Disable card after shake
         setTimeout(() => {
@@ -199,8 +234,8 @@ function handleCardClick(element) {
             element.style.cursor = 'default';
         }, 500);
 
-        // Check availability
-        if (wrongAttempts >= 2) {
+        // Check availability - show hint after 3 wrong (with 4 wrong options)
+        if (wrongAttempts >= 3) {
             // If 2 wrong, highlight correct one
             correctCard.style.transition = "all 0.5s ease";
             correctCard.style.boxShadow = "0 0 30px var(--accent-gold)";
@@ -265,18 +300,23 @@ function triggerSuccess(card) {
 }
 
 function launchConfetti() {
+    const colombiaFlagSvg = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><rect width="36" height="18" fill="#FCD116"/><rect y="18" width="36" height="9" fill="#003893"/><rect y="27" width="36" height="9" fill="#CE1126"/></svg>');
     for (let i = 0; i < 50; i++) {
         setTimeout(() => {
             const x = Math.random() * window.innerWidth;
-            const y = window.innerHeight;
-            const conf = document.createElement('div');
-            conf.innerText = "🇨🇴";
+            const size = Math.random() * 20 + 24;
+            const conf = document.createElement('img');
+            conf.src = colombiaFlagSvg;
+            conf.alt = '';
             conf.style.position = 'fixed';
             conf.style.left = x + 'px';
             conf.style.bottom = '0px';
-            conf.style.fontSize = Math.random() * 20 + 20 + 'px';
+            conf.style.width = size + 'px';
+            conf.style.height = size + 'px';
+            conf.style.objectFit = 'contain';
             conf.style.transition = "all 2s ease-out";
             conf.style.zIndex = "9999";
+            conf.style.pointerEvents = 'none';
             document.body.appendChild(conf);
 
             setTimeout(() => {

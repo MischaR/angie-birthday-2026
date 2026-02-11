@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Angie!</title>
+    <meta name="description" content="Happy Birthday Angie! A journey through our story—from Colombian roots to adventures around the world. Celebrating you, today and always.">
+    <meta property="og:title" content="Happy Birthday, mi cielita">
+    <meta property="og:description" content="Celebrating you, today and always. A journey through our story.">
+    <meta property="og:image" content="assets/colombia.png">
+    <!-- When deploying, use absolute URL for og:image, e.g. https://yoursite.com/assets/colombia.png -->
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +37,10 @@
             <div class="container">
                 <h2>A Message for You</h2>
                 <div class="video-wrapper">
+                    <div class="video-loading" id="youtube-loading" aria-hidden="true">
+                        <div class="video-loading-spinner"></div>
+                        <span>Loading video...</span>
+                    </div>
                     <!-- Placeholder ID - User to replace -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=placeholder"
                         title="YouTube video player" frameborder="0"
@@ -287,7 +297,11 @@
 
         <section class="love-note-section scroll-reveal">
             <div class="video-container">
-                <video controls autoplay loop muted playsinline>
+                <div class="video-loading" id="love-video-loading" aria-hidden="true">
+                    <div class="video-loading-spinner"></div>
+                    <span>Loading video...</span>
+                </div>
+                <video controls autoplay loop muted playsinline preload="metadata">
                     <source src="assets/Cinematic_Couple_Video_Generation.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -321,6 +335,20 @@
                     <div class="card-content">
                         <span class="emoji">🧥</span>
                         <h3>Winter Coat</h3>
+                    </div>
+                </div>
+
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">🧳</span>
+                        <h3>Suitcase</h3>
+                    </div>
+                </div>
+
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">📷</span>
+                        <h3>Camera</h3>
                     </div>
                 </div>
 

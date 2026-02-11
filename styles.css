@@ -169,6 +169,40 @@ p {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+.video-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f7;
+    border-radius: 20px;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.video-loading.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e5e5e7;
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -330,6 +364,19 @@ p {
     margin: 0;
 }
 
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Animations */
 .scroll-reveal {
     opacity: 0;
@@ -365,8 +412,8 @@ p {
     }
 
     .timeline-image {
-        height: 50vh;
-        min-height: 50vh;
+        height: 60vh;
+        min-height: 60vh;
     }
 
     .timeline-text {
@@ -424,6 +471,9 @@ footer {
     z-index: 0;
     /* Behind text but visible */
     animation: floatUp 15s linear infinite;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji", sans-serif;
+    unicode-bidi: isolate;
+    white-space: nowrap;
     /* Slower, smoother */
     will-change: transform, opacity;
     top: 100%;
@@ -462,6 +512,7 @@ footer {
 }
 
 .video-container {
+    position: relative;
     width: 100%;
     max-width: 500px;
     /* Reduced from 800px */
@@ -469,6 +520,11 @@ footer {
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
+}
+
+.video-container .video-loading {
+    position: absolute;
+    inset: 0;
 }
 
 .video-container video {
@@ -537,7 +593,9 @@ footer {
 
 .card {
     width: 200px;
+    min-width: 200px;
     height: 280px;
+    min-height: 280px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -708,8 +766,24 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .game-container {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        min-width: 140px;
+        min-height: 200px;
+        width: 140px;
+        height: 200px;
+    }
+
+    .card .emoji {
+        font-size: 2.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
     }
 
     .ticket .value {
