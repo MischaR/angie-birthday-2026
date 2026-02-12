@@ -23,8 +23,8 @@
 ## Your Journey
 
 **Section Heading:** Your Journey
-- **Description:** I feel so grateful to be part of your journey and witness your growth and success. You accomplished so much in such a short time and I am so proud of you. Now, we are already more than 4 years together and I can't think of future without you. You are just amazing and I love you so much. ❤️
-In the following I created an overview of some milestones of our journey and beautiful memories we shared. This is just small part of it, as there are many many other beautiful days, laughs and moments we shared that I hold dearly in my heart. I hope you enjoy this little retrospective of your accomplishments and our journey together.
+- **Description:** I feel so grateful to be part of your journey and witness your growth and success. You accomplished so much in such a short time and I am so proud of you. Now, we are already more than 4 years together and I can't think of a future without you. You are just amazing and I love you so much. ❤️
+In the following I created an overview of some milestones of our journey and beautiful memories we shared. This is just small part of it, as there are so many more beautiful days, laughs and moments we shared that I hold dearly in my heart. I hope you enjoy this little retrospective of your accomplishments and our journey together.
 
 ---
 
@@ -34,7 +34,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** From the colorful Colombia 🇨🇴
 - **Image:** `assets/Angie_Colombia.JPG`
 - **Image alt:** Colombian Landscape
-- **Description:** Born in the vibrant heart of the Coffee Region, your journey began surrounded by the warmth of family and the beauty of Colombia. This is where your strength, passion, and radiant spirit were forged.
+- **Description:** You grew up in the Colombia with the warmth of the people and vibrant culture that you embody too. Studying and working hard to become a teacher you already showed how dedicated, resilient and strong you are. Working in a school with kids that you helped and supported in their education and personal growth. When the time came you took the opportunity to start a new chapter in your life and push yourself out of your comfort zone. I am so happy that you did as this made it possible for us to meet.
 
 ---
 
@@ -44,7 +44,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** New Beginnings in Germany 🇩🇪
 - **Image:** `assets/Germany.jpg`
 - **Image alt:** Arriving in Germany
-- **Description:** Leaving everything behind to chase your dreams. You arrived in Germany with courage, diving into social work and braving the cold winters. A bold new chapter that proved just how resilient you are.
+- **Description:** Leaving everything behind to chase your dreams. You arrived in Germany with courage, diving into social work and braving the cold winters. Especially enjoying the winter times, more or less 😉. Also you arrived during the pandemic, which made the new life in Germany even more challenging.
 
 ---
 
@@ -54,7 +54,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Where It All Started ❤️
 - **Image:** `assets/FirstMeetings.jpg`
 - **Image alt:** Castle Frankenstein
-- **Description:** First time we met, we planned to have dinner at **Burg Frankenstein**, but it was closed, dark, and scary. So we warmed up at an all-you-can-eat Asian restaurant, where I was completely enticed by your smile. After that, we had a few dates that made me completely fall for you. ❤️
+- **Description:** For our first date we planned to go to **Burg Frankenstein** and we drove there. It was dark, cold, scary... and the restaurant was closed. We made the best of it and decided to go another all-you-can-eat Asian restaurant. During this dinner I was already enticed by your smile and you were totally enticed.. by the food. After that we had a few more dates and I was completely falling for you, and I am still falling for you every day ❤️
 
 ---
 
@@ -64,7 +64,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Slovenia Adventure 🚣
 - **Image:** `assets/slovenia.jpg`
 - **Image alt:** Slovenia Adventure
-- **Description:** Our first true test as travel partners! Camping under the stars, staying in simple hostels, and rowing together on the crystal-clear waters of Lake Bled. It was basic, it was beautiful, and it was us.
+- **Description:** This was our first trip together and we got to know each other a lot better. During the roadtrip we laughed, we camped, hiked and swam in the beautiful lakes. It was a very basic trip as money was tight back then 🥲. I enjoyed the time so much with you and still remember it as one of my favorite trips we took. I remember rowing on the beautiful lake Bled, hiking in the Austrian woods and camping under the stars.
 
 ---
 
@@ -74,17 +74,16 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Relaxing at Zugspitze ❄️
 - **Image:** `assets/zugspitze.jpg`
 - **Image alt:** Relaxing at Zugspitze
-- **Description:** Escaping to a winter wonderland for a romantic wellness retreat. Brave dips in freezing lakes followed by warm saunas, surrounded by the majestic snowy peaks of the Alps.
-
+- **Description:** After the basic trip to Slovenia we decided to go for a more luxurious and more romantic wellness trip. We went to a hotel with a spa and a pool and enjoyed the time together. We didn't go to the top of the Zugspitze, but we swam in the cold lake Eibsee and enjoyed the beautiful views. So after having a car again, let's go to Zugspitze!
 ---
 
-### Item 6: Student & Work (2023)
+### Item 6: Back to Germany and new Job! (2023)
 
 - **Date:** 2023
 - **Title:** Ambitious & Driven 🎓
 - **Image:** `assets/StartWork.jpg`
 - **Image alt:** Working Student
-- **Description:** Balancing a demanding MBA and work at **Xcelera** wasn't easy, but you made it look distinctive. Watching you grow professionally and academically has been nothing short of inspiring.
+- **Description:** This was a really tough year for you. Going back to Colombia after finishing the social work and coming back again to Germany to the unknown. I still remember how afraid you were and how uncertain everything was. But you kept going and didn't give up. After just 2 weeks back in Germany you already accomplished to find a job that we prepared for together. I nearly cried when you send me the message that you got the job and seeing you so happy and proud of yourself was just amazing.
 
 ---
 
