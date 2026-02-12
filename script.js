@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll snap: only on scroll end, past midpoint (50%) - avoids "pushed back" feeling
     const SNAP_THRESHOLD = 0.5; // 50% - must scroll past midpoint to commit
-    const sections = document.querySelectorAll('.hero, .video-section, .timeline-item, .love-note-section, .present-section');
+    const sections = document.querySelectorAll('.hero, .video-section, .intro-section, .timeline-item, .love-note-section, .present-section');
     let isSnapping = false;
     let snapTimeout;
     let lastScrollY = window.scrollY || 0;
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll blend effect - sections fade/scale based on distance from center (only when revealed)
-    const blendSections = document.querySelectorAll('.hero, .video-section, .timeline-item, .love-note-section, .present-section');
+    const blendSections = document.querySelectorAll('.hero, .intro-section, .video-section, .timeline-item, .love-note-section, .present-section');
     let blendRaf = null;
 
     function updateScrollBlend() {

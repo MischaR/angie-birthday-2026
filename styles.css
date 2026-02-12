@@ -103,6 +103,22 @@ p {
     text-align: center;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
+}
+
+/* Intro Section */
+.intro-section {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    background-color: var(--bg-color);
+    scroll-snap-align: start;
+}
+
+.intro-section h2 {
+    margin-bottom: 2rem;
 }
 
 .hero-content {
@@ -155,8 +171,15 @@ p {
 }
 
 @keyframes scrollBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
 }
 
 /* Video Section */
@@ -211,7 +234,9 @@ p {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .video-wrapper iframe {

@@ -20,9 +20,11 @@
 
 ---
 
-## Our Journey (Timeline)
+## Your Journey
 
-**Section Heading:** Our Journey
+**Section Heading:** Your Journey
+- **Description:** I feel so grateful to be part of your journey and witness your growth and success. You accomplished so much in such a short time and I am so proud of you. Now, we are already more than 4 years together and I can't think of future without you. You are just amazing and I love you so much. ❤️
+In the following I created an overview of some milestones of our journey and beautiful memories we shared. This is just small part of it, as there are many many other beautiful days, laughs and moments we shared that I hold dearly in my heart. I hope you enjoy this little retrospective of your accomplishments and our journey together.
 
 ---
 
