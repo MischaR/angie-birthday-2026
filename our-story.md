@@ -93,7 +93,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Malaga Sun & Firsts 🇪🇸
 - **Image:** `assets/malaga.jpg`
 - **Image alt:** Malaga Trip
-- **Description:** Our first flight together! From hiking up for the perfect view to enjoying delicious mangos and tapas in the old town. And who could forget your first ocean swim—conquering the waves with your trusty noodle! A trip of pure joy.
+- **Description:** This was our first flight together! What I remember most of this trip was the bad start with our apartment and how we gone through this problem together. I love that I can rely on you always and that you have my back. Also we went hiking, eating delicious mangos and swimming in the ocean with your noodle. Another highlight was visiting the beautiful old town of Malaga and having a good time with your friend.
 
 ---
 
@@ -103,7 +103,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** New Year in Zurich 🇨🇭
 - **Image:** `assets/zurich.jpg`
 - **Image alt:** New Year in Zurich
-- **Description:** Ringing in the New Year with style in Zurich. Spectacular fireworks reflecting off the lake, city lights, and a midnight kiss to start 2024 with love and excitement.
+- **Description:** For celebrating new chapters in our lives together we started the new year in Zurich. Seeing the fireworks at the lake. You just started with your MBA and one of the hardest year was in front of us. We had to balance work, studies and of course our relationship. We knew it would be tough... but we did it!
 
 ---
 
@@ -113,7 +113,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Colombia Together 🇨🇴
 - **Image:** `assets/Colombia_Trip.JPG`
 - **Image alt:** Trip to Colombia: San Andres & Yopal
-- **Description:** A journey to your roots. From the bustling streets of Bogota to the paradise beaches of San Andres & Providencia with your parents. Visiting El Yopal gave me a glimpse into the place that made you, you.
+- **Description:** This was our first trip together to Colombia. For me it was amazing to get to know your parents and your family and visiting different places in Colombia. We went to San Andres and Providencia with your parents and enjoyed the beautiful beaches and the landscapes. Also visiting your place in Yopal was really great and enjoyed being there with you and your family.
 
 ---
 
@@ -123,7 +123,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Dubai Adventures 🇦🇪
 - **Image:** `assets/Dubai_Trip.JPG`
 - **Image alt:** Dubai Trip
-- **Description:** A study trip like no other. Exploring the futuristic skyline of Dubai, standing atop the Burj Khalifa, and soaking in the desert sun. A perfect blend of learning and unforgettable experiences.
+- **Description:** With your MBA program we got the chance to go to Dubai and get to know the city, the culture and the business environment. We visited the Burj Khalifa and the Dubai Mall and enjoyed the beautiful views and the skyline. Also having a drink at the Burj Al Arab was a great experience and going to partying. This trip was quite exhausting because of doing so many things in such a short time. But we made a lot of memories and got to know many new people.
 
 ---
 
@@ -133,7 +133,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Viva México 🇲🇽
 - **Image:** `assets/Mexico.jpg`
 - **Image alt:** Mexico Trip
-- **Description:** Celebrating love at a joyful wedding. Feasting on authentic tacos, dancing to Shakira, and floating over pyramids in hot air balloons. Vibrant, colorful, and full of life—just like you.
+- **Description:** Another amazing trip that we did together was the wedding of Patrick and Tania in Mexico. We went to Mexico City and enjoyed the beautiful city, the food and the culture. We flew over the pyramids in a hot air balloon and enjoyed the beautiful views and also going to the crazy big Shakira concert. Also just going to restaurant, eating tacos or having a smoothie is something that I love doing with you.
 
 ---
 
@@ -143,7 +143,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Roadtrip to St. Maxime 🇫🇷
 - **Image:** `assets/France.jpg`
 - **Image alt:** France Roadtrip
-- **Description:** Driving down to the Côte d'Azur for the sweet life. Baguettes, beaches, and sunsets in St. Maxime. A relaxing escape to enjoy the finer things in life together.
+- **Description:** For now our last vaction that we did.. going on a roadtrip by car like 3 years ago in the beginning of our relationship. Listening to music while driving and getting the princess passenger treatment we went to St. Maxime in France. Also this vacation put us to a test in the beginning with a flat completely under water. Despite this tough situation we managed it and enjoyed some sunny days at the Côte d'Azur, taking in the last sun rays of the year in St. Tropez and Nice and enjoying the French cuisine.
 
 ---
 
@@ -153,7 +153,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Mastering the Future 🎓
 - **Image:** `assets/MBA.jpg`
 - **Image alt:** MBA Graduation
-- **Description:** **Congratulations!** You did it! Successfully graduating with your MBA in General Management from IMC College. A huge milestone that reflects your dedication and intelligence.
+- **Description:** **Congratulations!** You did it! Successfully graduating with your MBA in General Management from IMC College. This is a huge milestone. You came to Germany just 2,5 years ago, started working in a new field, struggling with German and still finishing your MBA. This is just awesome! I'm so proud of you and so happy for you achieving this. Just an awesome ending for the year!
 
 ---
 
@@ -163,7 +163,8 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** Marketing Specialist 💼
 - **Image:** `assets/StartWorkFullTime.jpg`
 - **Image alt:** New Job
-- **Description:** Stepping into your new role as an IT Marketing Specialist. Ready to conquer the professional world with your creativity and expertise. The future is bright!
+- **Description:** After finishing your MBA you could finally start full time as a Marketing Specialist. After all the hard work and struggle it paid off! Aaaand you are allowed to pay taxes to Germany now. This huge for Ger.. ahh you, of course! 
+Jokes aside, what you achieved in this short time is just stunning! You 
 
 ---
 
@@ -173,7 +174,7 @@ In the following I created an overview of some milestones of our journey and bea
 - **Title:** To What Comes Next 🚀
 - **Image:** `assets/future.jpg`
 - **Image alt:** Future Together
-- **Description:** 33 is just the beginning. I can't wait to see what the future holds for us—more travels, more laughs, and building our life, brick by brick, together. Happy Birthday, mi amor!
+- **Description:**  You achieved so much and you have a future with many opportunities in front you! Just take them and keep going. I'm looking forward to being at your side, supporting and loving you as best as I can. Let's keep making more beautiful memories. Happy birthday, mi cielo!
 
 ---
 
@@ -183,7 +184,7 @@ In the following I created an overview of some milestones of our journey and bea
 
 **Message:**
 
-From our first walk at Castle Frankenstein to our cozy nights in,
+From our first date at Castle Frankenstein to lazy cozy nights at home,
 you are the most beautiful, wonderful woman in the world.
 You are amazing, sweet, funny, and loving.
 You make my world complete. I love you more than words can say.
