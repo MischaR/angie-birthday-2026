@@ -191,7 +191,9 @@ You make my world complete. I love you more than words can say.
 
 **Signature:** Forever yours, Mischa
 
-**Video:** `assets/Cinematic_Couple_Video_Generation.mp4`
+**Video:** `assets/Cinematic_Couple_Video_Generation.mp4` (optimized)
+- WebM: `assets/Cinematic_Couple_Video_Generation.webm` (used by Chrome/Firefox)
+- Original: `assets/archive/Cinematic_Couple_Video_Generation_original.mp4`
 
 ---
 
@@ -226,20 +228,24 @@ You make my world complete. I love you more than words can say.
 
 ## Image Reference
 
-| Item | Image file |
-|------|------------|
-| 1 | colombia.png |
-| 2 | germany.png |
-| 3 | castle.png |
-| 4 | slovenia.jpg |
-| 5 | zugspitze.jpg |
-| 6 | work.png |
-| 7 | malaga.jpg |
-| 8 | zurich.jpg |
-| 9 | colombia_detail.png |
-| 10 | dubai.png |
-| 11 | mexico.png |
-| 12 | france.png |
-| 13 | mba.png |
-| 14 | marketing.png |
-| 15 | future.png |
+All timeline images use **WebP** format (primary) with originals in `archive/originals/` as fallback.
+
+| Item | WebP (primary) | Fallback |
+|------|----------------|----------|
+| 1 | Angie_Colombia.webp | archive/originals/Angie_Colombia.JPG |
+| 2 | Germany.webp | archive/originals/Germany.jpeg |
+| 3 | FirstMeetings.webp | archive/originals/FirstMeetings.jpg |
+| 4 | slovenia.webp | archive/originals/slovenia.jpg |
+| 5 | zugspitze.webp | archive/originals/zugspitze.jpg |
+| 6 | StartWork.webp | archive/originals/StartWork.JPG |
+| 7 | malaga.webp | archive/originals/malaga.jpg |
+| 8 | zurich.webp | archive/originals/zurich.jpg |
+| 9 | Colombia_Trip.webp | archive/originals/Colombia_Trip.JPG |
+| 10 | Dubai.webp | archive/originals/Dubai.JPG |
+| 11 | Mexico.webp | archive/originals/Mexico.jpg |
+| 12 | France.webp | archive/originals/France.jpg |
+| 13 | MBA.webp | archive/originals/MBA.jpg |
+| 14 | StartWorkFulltime.webp | archive/originals/StartWorkFulltime.jpg |
+| 15 | Future.webp | archive/originals/Future.jpg |
+
+**Fallback for errors:** `assets/colombia.png`

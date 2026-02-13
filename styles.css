@@ -346,6 +346,12 @@ p {
     transition: box-shadow 0.5s ease;
 }
 
+.timeline-image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .timeline-image img {
     width: 100%;
     height: 100%;
